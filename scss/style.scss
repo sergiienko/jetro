@@ -1,0 +1,155 @@
+@import "normalize";
+@import "foundation";
+@import "font";
+
+.top-bar {
+  .name {
+    h1 {
+      a {
+        color: $primary-color;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.ba-cta {
+  
+  &-item {
+
+    &__img {
+      float: left;
+      margin-right: rem-calc(20);
+    }
+
+    &__text {
+      clear: both;
+      font-size: rem-calc(12);
+      line-height: 1.5;
+    }
+
+  }
+
+}
+
+.ba-recent {
+  padding-bottom: rem-calc(40);
+
+  &__title {
+    background: url(../img/line.png) repeat-x;
+
+    &-text {
+      display: inline-block;
+      background-color: #FFF;
+      padding-right: rem-calc(20);
+    } 
+    
+  }
+
+  &-item {
+
+    &__desc {
+      border: solid #dbdbdb;
+      border-width: 0 1px 1px;
+      padding: rem-calc(15);
+    }
+
+    &__title {
+      color: #b9b9b9;
+      margin: 0;
+      line-height: 1;
+    }
+
+    &__date {
+      color: $primary-color;
+      font-family: "Bebas", $body-font-family;
+      font-size: 11px;
+      line-height: 1;
+    }
+
+  }
+  
+}
+
+.ba-footer {
+  $footer-color: #fff;
+  $footer-font-size: rem-calc(12);
+
+  color: $footer-color;
+  background-color: #f2b19c;
+
+  .row {
+    position: relative;
+    background-color: #fff;
+    padding: rem-calc(30) rem-calc(11);
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; bottom: 0; left: 11px; right: 11px;
+      background-color: $primary-color;
+    }
+  }
+
+  .columns {
+    padding: 0 rem-calc(30);
+  }
+
+  &-col {
+
+    &__title {
+      color: $footer-color;
+    }
+
+  }
+
+  p,
+  a,
+  li {
+    font-size: $footer-font-size;
+  }
+
+  a {
+    color: #f3b29d;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &[href^=mailto],
+    &[href^=callto] {
+      display: block;
+      color: $footer-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__social {
+    display: inline-block;
+    width: 28px;
+    height: 26px;
+    background-image: url(../img/icon/social.png);
+    border: 1px solid #fff;
+    border-radius: 3px;
+
+    &:hover {
+      opacity: .5;
+      transform: translateY(-5px);
+    }
+
+    &_fb {
+      border-color: #335393;
+    }
+
+    &_tw {
+      border-color: #25849d;
+      background-position: -28px 0;
+    }
+
+  }
+
+}

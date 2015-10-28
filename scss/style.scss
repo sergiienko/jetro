@@ -136,6 +136,45 @@ h1, h2, h3, h4, h5, h6 {
 
   &-item {
 
+    &__link {
+
+      &_img {
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0; bottom: 0; left: 0; right: 0;
+          transition: transform .3s ease-in;
+        }
+
+        &:before {
+          transform: translate(120%, -120%) scale(2) rotate(45deg);
+          background-color: #000;
+          opacity: .75;
+        }
+
+        &:after {
+          background: url(../img/icon/plus.svg) no-repeat 50%;
+          transform: translate(100%, -100%);
+        }
+
+        &:hover {
+
+          &:before {
+            transform: translate(0, 0) scale(2) rotate(45deg);
+          }
+
+          &:after {
+            transform: translate(0, 0);
+          }
+        }
+      }
+    }
+
     &__img {
       width: 100%;
     }

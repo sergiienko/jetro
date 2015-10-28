@@ -52,7 +52,8 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // This is the default html and body font-size for the base rem value.
-$rem-base: 16px; 
+// $base-font-size: 12px;
+// $rem-base: 16px; 
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import 'foundation/functions';
@@ -124,7 +125,7 @@ $primary-color: #e8663c;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
-$body-bg: url(../img/bg.png);
+// $body-bg: url(../img/bg.png);
 // $body-font-color: $jet;
 $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -220,21 +221,18 @@ $header-font-color: $primary-color;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
+$h1-font-size: rem-calc(36);
 $h2-font-size: rem-calc(20);
-// $h3-font-size: rem-calc(27);
 $h3-font-size: rem-calc(18);
-// $h4-font-size: rem-calc(23);
 $h4-font-size: rem-calc(16);
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
-// $h2-font-reduction: rem-calc(10);
-// $h3-font-reduction: rem-calc(5);
-// $h4-font-reduction: rem-calc(5);
+$h1-font-reduction: rem-calc(0);
+$h2-font-reduction: rem-calc(0);
+$h3-font-reduction: rem-calc(0);
+$h4-font-reduction: rem-calc(0);
 // $h5-font-reduction: 0;
 // $h6-font-reduction: 0;
 
@@ -252,7 +250,7 @@ $h4-font-size: rem-calc(16);
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: rem-calc(12);
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -918,9 +916,9 @@ $button-font-sml: rem-calc(12);
 
 // We use these to control the caption styles
 // $orbit-container-bg: none;
-// $orbit-caption-bg: rgba(51,51,51, .8);
+$orbit-caption-bg: rgba($primary-color, .8);
 // $orbit-caption-font-color: $white;
-// $orbit-caption-font-size: rem-calc(14);
+$orbit-caption-font-size: rem-calc(12);
 // $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
 // $orbit-caption-padding: rem-calc(10 14);
 // $orbit-caption-height: auto;
@@ -1430,7 +1428,7 @@ $topbar-link-bg: $topbar-bg;
 $topbar-link-bg-hover: $topbar-link-bg;
 // $topbar-link-bg-color-hover: $charcoal;
 $topbar-link-bg-active: $topbar-link-bg;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-bg-active-hover: $topbar-link-bg;
 $topbar-link-font-family: $header-font-family;
 // $topbar-link-text-transform: none;
 // $topbar-link-padding: ($topbar-height / 3);

@@ -2,9 +2,39 @@
 @import "foundation";
 @import "font";
 
+h1, h2, h3, h4, h5, h6 {
+  word-spacing: 3px;
+}
+
+.ba-wrapper {
+  overflow: hidden;
+}
+
 .top-bar {
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    width: 1000px;
+    height: 61px;
+    margin-right: 11px;
+    background-color: #f2b19c;
+  }
+
+  &:after {
+    @extend :before;
+    right: auto;
+    left: 100%;
+    margin-left: 11px;
+  }
+
   .name {
+
     h1 {
+
       a {
         color: $primary-color;
         padding: 0;
@@ -13,7 +43,66 @@
   }
 }
 
+.ba-slider {
+
+  &__thumbnails {
+    margin-top: $column-gutter;
+  }
+
+  %arrow {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .3);
+    }
+  }
+
+  &__prev {
+    @extend %arrow;
+    left: 0;
+    background-image: url(../img/icon/prev.svg);
+  }
+
+  &__next {
+    @extend %arrow;
+    right: 0;
+    background-image: url(../img/icon/next.svg);
+  }
+
+}
+
+.ba-slide {
+
+  &__title {
+    color: #FFF;
+    margin: 0 0 10px;
+  }
+
+  &__caption {
+
+    @media #{$medium-up} {
+      margin: 30px;
+      left: 0;
+      max-width: 420px;
+      width: auto !important;
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+
+  }
+
+}
+
 .ba-cta {
+  padding-top: rem-calc(40);
   
   &-item {
 
@@ -31,8 +120,7 @@
   }
 
 }
-
-.ba-recent {
+.ba-work {
   padding-bottom: rem-calc(40);
 
   &__title {
@@ -47,6 +135,10 @@
   }
 
   &-item {
+
+    &__img {
+      width: 100%;
+    }
 
     &__desc {
       border: solid #dbdbdb;
@@ -127,18 +219,24 @@
       }
     }
   }
+}
 
-  &__social {
+.ba-social {
+  margin-top: 20px;
+
+  &__link {
+    $width: 28px;
+    $height: 26px;
+
     display: inline-block;
-    width: 28px;
-    height: 26px;
+    width: $width;
+    height: $height;
     background-image: url(../img/icon/social.png);
     border: 1px solid #fff;
     border-radius: 3px;
 
     &:hover {
-      opacity: .5;
-      transform: translateY(-5px);
+      transform: translateY(-2px);
     }
 
     &_fb {
@@ -147,9 +245,22 @@
 
     &_tw {
       border-color: #25849d;
-      background-position: -28px 0;
+      background-position: -$width 0;
     }
 
-  }
+    &_ml {
+      border-color: #898989;
+      background-position: -($width * 2) 0;
+    }
 
+    &_rs {
+      border-color: #ae4600;
+      background-position: -($width * 3) 0;
+    }
+
+    &_vi {
+      border-color: #007da5;
+      background-position: -($width * 4) 0;
+    }
+  }
 }

@@ -6,6 +6,12 @@ h1, h2, h3, h4, h5, h6 {
   word-spacing: 3px;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .ba-wrapper {
   overflow: hidden;
 }
@@ -233,12 +239,6 @@ h1, h2, h3, h4, h5, h6 {
       color: $footer-color;
     }
 
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
   }
 
   p,

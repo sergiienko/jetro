@@ -288,6 +288,10 @@ ul {
   font-style: italic;
   text-align: center;
 
+  .close {
+    display: none;
+  }
+
   &.success {
     color: #98c601;
     background-color: #effeb9;

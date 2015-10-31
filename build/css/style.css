@@ -3831,6 +3831,8 @@ ul {
   font-size: 0.875rem;
   font-style: italic;
   text-align: center; }
+  .alert-box .close {
+    display: none; }
   .alert-box.success {
     color: #98c601;
     background-color: #effeb9;

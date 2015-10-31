@@ -26,7 +26,7 @@ ul {
     right: 100%;
     width: 1000px;
     height: 61px;
-    margin-right: 11px;
+    margin-right: 10px;
     background-color: #f2b19c;
   }
 
@@ -34,7 +34,7 @@ ul {
     @extend :before;
     right: auto;
     left: 100%;
-    margin-left: 11px;
+    margin-left: 10px;
   }
 
   .name {
@@ -124,10 +124,9 @@ ul {
     }
 
   }
-
 }
+
 .ba-work {
-  padding-bottom: rem-calc(40);
 
   &__title {
     background: url(../img/line.png) repeat-x;
@@ -141,6 +140,7 @@ ul {
   }
 
   &-item {
+    padding-bottom: rem-calc(40);
 
     &__link {
 
@@ -207,6 +207,132 @@ ul {
   }
   
 }
+
+// Porfolio
+
+.ba-page-title {
+  margin-bottom: rem-calc(25);
+
+  &__container {
+    background-color: #e8603c;
+    padding: 15px 20px 5px;
+  }
+  
+  &__text {
+    color: #fff;
+    font-size: rem-calc(24);
+    line-height: 30px;
+  }
+}
+
+.ba-filter {
+  @include sub-nav();
+
+  dd {
+    line-height: rem-calc(24);
+    margin-left: rem-calc(15);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      padding: 0;
+    }
+  }
+}
+
+// Portfolio Item
+
+.ba-portfolio {
+
+  &__img {
+    margin-bottom: rem-calc(25);
+  }
+}
+
+// About Us
+
+.ba-about {
+
+  &__img-wrapper {
+    float: left;
+    margin-right: rem-calc(20);
+    padding: rem-calc(2);
+    border: rem-calc(1) solid #ccc;
+  }
+
+  &__text {
+
+  }
+
+  &__letter {
+    font-size: rem-calc(36);
+    line-height: 1;
+    color: $primary-color;
+    float: left;
+    margin-right: rem-calc(5);
+  }
+
+  &__bq {
+    font-size: rem-calc(12);
+    font-style: italic;
+    margin-left: rem-calc(50);
+  }
+}
+
+// Alert Box
+
+.alert-box {
+  font-size: rem-calc(14);
+  font-style: italic;
+  text-align: center;
+
+  &.success {
+    color: #98c601;
+    background-color: #effeb9;
+    border: 1px solid #98c601;
+  }
+
+  &.alert {
+    color: #eb5439;
+    background-color: #fbcbc1;
+    border: 1px solid #eb5439;
+  }
+
+  &.warrning {
+    color: #fab418;
+    background-color: #ffe9ad;
+    border: 1px solid #fab418;
+  }
+
+  &.info {
+    color: #4d8fcb;
+    background-color: #d1e4f3;
+    border: 1px solid #4d8fcb; 
+  }
+}
+
+// Sidebar
+
+.ba-widget {
+
+  &__title {
+    background: url(../img/line_small.png) repeat-x;
+
+    &-text {
+      display: inline-block;
+      background-color: #FFF;
+      padding-right: rem-calc(15);
+    } 
+  }
+
+  &__img {
+    margin-bottom: rem-calc(5);
+  }
+}
+
+// Footer
 
 .ba-footer {
   $footer-color: #fff;

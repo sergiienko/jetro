@@ -26,7 +26,14 @@ var path = {
       img: 'build/img',
       font: 'build/font'
     },
-    clean: 'build'
+    watch: {
+      html: 'src/*.html',
+      style: 'src/scss/**/*.scss',
+      js: 'src/js/**/*.js',
+      img: 'src/img/**/*.{png,svg,jpg}',
+      font: 'src/font/**/*.*'
+    },
+    clean: ['build', '.tmp']
 };
 
 gulp.task('html', function() {
@@ -43,30 +50,26 @@ gulp.task('sass', function () {
       .pipe($.autoprefixer({browsers: ['> 1%', 'IE >= 9']}))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(path.tmp.css))
-    .pipe(gulp.dest(path.build.css));
+    // .pipe($.minifyCss())
+    .pipe(gulp.dest(path.build.css))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('js', function() {
   return gulp.src(path.src.js)
-    .pipe(gulp.dest(path.tmp.js))
     .pipe(gulp.dest(path.build.js));
 })
  
 gulp.task('img', function() {
   return gulp.src(path.src.img)
-    .pipe(gulp.dest(path.tmp.img))
+    .pipe($.cache($.imagemin({ progressive: true, interlaced: true })))
     .pipe(gulp.dest(path.build.img));
 });
 
 gulp.task('font', function() {
   return gulp.src(path.src.font)
-    .pipe(gulp.dest(path.tmp.font))
     .pipe(gulp.dest(path.build.font));
 });
-
-// gulp.task('watch:sass', function () {
-//   gulp.watch(path.src.style, ['sass']);
-// });
 
 // Remove the build directory.
 gulp.task('clean', del.bind(null, path.clean, { dot: true }));
@@ -74,9 +77,9 @@ gulp.task('clean', del.bind(null, path.clean, { dot: true }));
 // Watch files for changes and reload the page in the browser when they do.
 gulp.task('watch', [ 'html', 'sass', 'js', 'img', 'font' ], function() {
   browserSync({ notify: false, server: ['.tmp', 'src'] });
-  gulp.watch([ path.src.style ], [ 'sass', browserSync.reload ]);
-  gulp.watch([ path.src.html ], [ 'html', browserSync.reload ]);
-  gulp.watch([ path.src.img ], browserSync.reload);
+  gulp.watch([ path.watch.style ], [ 'sass', browserSync.reload ]);
+  gulp.watch([ path.watch.html ], [ 'html', browserSync.reload ]);
+  gulp.watch([ path.watch.img ], browserSync.reload);
 });
 
 // Build the source and serve the result.
@@ -86,7 +89,7 @@ gulp.task('watch:build', [ 'build' ], function () {
 
 // Build the source.
 gulp.task('build', [ 'clean' ], function (callback) {
-  runSequence([ 'sass', 'html', 'img' ], callback);
+  runSequence([ 'sass', 'html', 'js', 'img', 'font' ], callback);
 });
 
 gulp.task('default', [ 'watch' ]);

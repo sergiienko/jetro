@@ -3850,12 +3850,24 @@ ul {
     background-color: #d1e4f3;
     border: 1px solid #4d8fcb; }
 
+.ba-map {
+  width: 100%;
+  height: 402px;
+  max-width: 675px; }
+
 .ba-widget__title {
   background: url(../img/line_small.png) repeat-x; }
   .ba-widget__title-text {
     display: inline-block;
     background-color: #FFF;
     padding-right: 0.9375rem; }
+
+.ba-widget__categories {
+  margin-bottom: 1.875rem; }
+  .ba-widget__categories li a {
+    color: #464646; }
+    .ba-widget__categories li a:hover {
+      color: #e8663c; }
 
 .ba-widget__img {
   margin-bottom: 0.3125rem; }

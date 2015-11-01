@@ -79,6 +79,7 @@ gulp.task('watch', [ 'html', 'sass', 'js', 'img', 'font' ], function() {
   browserSync({ notify: false, server: ['.tmp', 'src'] });
   gulp.watch([ path.watch.style ], [ 'sass', browserSync.reload ]);
   gulp.watch([ path.watch.html ], [ 'html', browserSync.reload ]);
+  gulp.watch([ path.watch.js ], [ 'js', browserSync.reload ]);
   gulp.watch([ path.watch.img ], browserSync.reload);
 });
 

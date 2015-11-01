@@ -317,6 +317,12 @@ ul {
   }
 }
 
+.ba-map {
+  width: 100%;
+  height: 402px;
+  max-width: 675px;
+}
+
 // Sidebar
 
 .ba-widget {
@@ -329,6 +335,21 @@ ul {
       background-color: #FFF;
       padding-right: rem-calc(15);
     } 
+  }
+
+  &__categories {
+    margin-bottom: rem-calc(30);
+
+    li {
+
+      a {
+        color: #464646;
+
+        &:hover {
+          color: $primary_color;
+        }
+      }
+    }
   }
 
   &__img {

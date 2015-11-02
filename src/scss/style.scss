@@ -317,10 +317,39 @@ ul {
   }
 }
 
+// Map
+
 .ba-map {
   width: 100%;
   height: 402px;
-  max-width: 675px;
+  // max-width: 675px;
+  margin-bottom: 30px;
+}
+
+// Contact
+
+address {
+  font-style: normal;
+
+  span {
+    color: $primary-color;
+    font-weight: 700;
+  }
+}
+
+input[type=text],
+input[type=email] {
+  line-height: 18px;
+  width: 100%;
+  max-width: 216px;
+}
+
+textarea {
+  height: 200px;
+}
+
+button {
+  padding: rem-calc(15 32 10)
 }
 
 // Sidebar

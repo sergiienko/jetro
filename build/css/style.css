@@ -2263,6 +2263,61 @@ label.error {
   .orbit-bullets {
     display: none; } }
 
+ul.pagination {
+  display: block;
+  margin-left: -0.3125rem;
+  min-height: 1.5rem; }
+  ul.pagination li {
+    color: #222222;
+    font-size: 0.875rem;
+    height: 1.5rem;
+    margin-left: 0.3125rem; }
+    ul.pagination li a, ul.pagination li button {
+      border-radius: 3px;
+      -webkit-transition: background-color 300ms ease-out;
+              transition: background-color 300ms ease-out;
+      background: none;
+      color: #999999;
+      display: block;
+      font-size: 1em;
+      font-weight: normal;
+      line-height: inherit;
+      padding: 0.0625rem 0.625rem 0.0625rem; }
+    ul.pagination li:hover a,
+    ul.pagination li a:focus,
+    ul.pagination li:hover button,
+    ul.pagination li
+button:focus {
+      background: #e6e6e6; }
+    ul.pagination li.unavailable a, ul.pagination li.unavailable button {
+      cursor: default;
+      color: #999999;
+      pointer-events: none; }
+    ul.pagination li.unavailable:hover a,
+    ul.pagination li.unavailable a:focus,
+    ul.pagination li.unavailable:hover button,
+    ul.pagination li.unavailable button:focus {
+      background: transparent; }
+    ul.pagination li.current a, ul.pagination li.current button {
+      background: #e8663c;
+      color: #FFFFFF;
+      cursor: default;
+      font-weight: bold; }
+      ul.pagination li.current a:hover,
+      ul.pagination li.current a:focus, ul.pagination li.current button:hover,
+      ul.pagination li.current button:focus {
+        background: #e8663c; }
+  ul.pagination li {
+    display: block;
+    float: left; }
+
+/* Pagination centred wrapper */
+.pagination-centered {
+  text-align: center; }
+  .pagination-centered ul.pagination li {
+    display: inline-block;
+    float: none; }
+
 .sub-nav {
   display: block;
   margin: 0.625rem 0 2.1875rem;
@@ -3057,7 +3112,7 @@ h5 {
   font-size: 0.875rem; }
 
 h6 {
-  font-size: 1rem; }
+  font-size: 0.75rem; }
 
 .subheader {
   line-height: 1.4;
@@ -3229,7 +3284,7 @@ blockquote p {
   h5 {
     font-size: 0.875rem; }
   h6 {
-    font-size: 1rem; } }
+    font-size: 0.75rem; } }
 
 /*
        * Print styles.
@@ -3889,6 +3944,90 @@ button {
 
 .ba-widget__img {
   margin-bottom: 0.3125rem; }
+
+.ba-post {
+  position: relative;
+  margin-bottom: 55px; }
+  .ba-post:last-of-type {
+    margin-bottom: 0; }
+  .ba-post__img {
+    width: 100%;
+    margin-bottom: 25px; }
+  .ba-post:after {
+    content: '';
+    display: block;
+    height: 14px;
+    background: url(../img/line_small.png) repeat-x 0; }
+
+.ba-post-type {
+  position: absolute;
+  left: -85px;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  background-color: #e8663c;
+  text-align: center; }
+  .ba-post-type_img {
+    vertical-align: middle; }
+
+.ba-pager {
+  display: block;
+  margin-left: -0.3125rem;
+  min-height: 1.5rem;
+  margin: 50px 0; }
+  .ba-pager li {
+    color: #222222;
+    font-size: 0.875rem;
+    height: 1.5rem;
+    margin-left: 0.3125rem; }
+    .ba-pager li a, .ba-pager li button {
+      border-radius: 3px;
+      -webkit-transition: background-color 300ms ease-out;
+              transition: background-color 300ms ease-out;
+      background: none;
+      color: #999999;
+      display: block;
+      font-size: 1em;
+      font-weight: normal;
+      line-height: inherit;
+      padding: 0.0625rem 0.625rem 0.0625rem; }
+    .ba-pager li:hover a,
+    .ba-pager li a:focus,
+    .ba-pager li:hover button,
+    .ba-pager li
+button:focus {
+      background: #e6e6e6; }
+    .ba-pager li.unavailable a, .ba-pager li.unavailable button {
+      cursor: default;
+      color: #999999;
+      pointer-events: none; }
+    .ba-pager li.unavailable:hover a,
+    .ba-pager li.unavailable a:focus,
+    .ba-pager li.unavailable:hover button,
+    .ba-pager li.unavailable button:focus {
+      background: transparent; }
+    .ba-pager li.current a, .ba-pager li.current button {
+      background: #e8663c;
+      color: #FFFFFF;
+      cursor: default;
+      font-weight: bold; }
+      .ba-pager li.current a:hover,
+      .ba-pager li.current a:focus, .ba-pager li.current button:hover,
+      .ba-pager li.current button:focus {
+        background: #e8663c; }
+  .ba-pager li {
+    display: block;
+    float: left; }
+  .ba-pager li a {
+    font: 0.875rem "Bebas", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    line-height: 1.125rem;
+    color: #fff;
+    background-color: #f3b29d;
+    border-radius: 0;
+    padding-top: 6px;
+    padding-bottom: 2px; }
+    .ba-pager li a:hover {
+      background-color: #e8663c; }
 
 .ba-footer {
   color: #fff;

@@ -386,6 +386,65 @@ button {
   }
 }
 
+// Blog
+
+.ba-post {
+  position: relative;
+  margin-bottom: 55px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    height: 14px;
+    background: url(../img/line_small.png) repeat-x 0;
+  }
+}
+
+.ba-post-type {
+  position: absolute;
+  left: -85px;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  background-color: $primary_color;
+  text-align: center;
+
+  &_img {
+    vertical-align: middle;
+  }
+}
+
+.ba-pager {
+  @include pagination;
+  margin: 50px 0;
+
+  li {
+
+    a {
+      font: rem-calc(14) 'Bebas', $body-font-family;
+      line-height: rem-calc(18);
+      color: #fff;
+      background-color: #f3b29d;
+      border-radius: 0;
+      padding-top: 6px;
+      padding-bottom: 2px;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
 // Footer
 
 .ba-footer {

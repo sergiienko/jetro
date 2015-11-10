@@ -102,9 +102,7 @@ ul {
     :last-child {
         margin-bottom: 0;
     }
-
   }
-
 }
 
 .ba-cta {
@@ -136,7 +134,6 @@ ul {
       background-color: #FFF;
       padding-right: rem-calc(20);
     } 
-    
   }
 
   &-item {
@@ -396,6 +393,13 @@ button {
     margin-bottom: 0;
   }
 
+  &__title {
+
+    &_type_link {
+      margin-bottom: 0;
+    }
+  }
+
   &__img {
     width: 100%;
     margin-bottom: 25px;
@@ -406,6 +410,37 @@ button {
     display: block;
     height: 14px;
     background: url(../img/line_small.png) repeat-x 0;
+  }
+
+  &__quotation {
+    color: #474747;
+    font-size: 13px;
+    line-height: 18px;
+    font-style: italic;
+    background: #f5f5f5 url(../img/blockquot.png) no-repeat 35px 20px;
+    border: 0;
+    padding: 20px 30px 20px 75px;
+  }
+
+  &__link {
+    display: block;
+    color: #a0a0a0;
+    font-size: 12px;
+    margin: -2px 0 20px;
+  }
+}
+
+.ba-post-info {
+  margin-bottom: 15px;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    color: #bababa;
+    margin: 0;
+
   }
 }
 

@@ -58,8 +58,8 @@ gulp.task('sass', function () {
 gulp.task('js', function() {
   return gulp.src(path.src.js)
     .pipe(gulp.dest(path.build.js));
-})
- 
+});
+
 gulp.task('img', function() {
   return gulp.src(path.src.img)
     .pipe($.cache($.imagemin({ progressive: true, interlaced: true })))
